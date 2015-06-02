@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="/css/main.css" rel="stylesheet" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" />
+  <link href="/bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+  <script src="/js/bundle.js"></script>
+</head>
+<body ng-app="presentationApp">
+  <div ng-controller="slideCtrl">
+    <div  ng-keydown="key($event)" tabindex="1"  style="min-height:600px">
+
+      <div ng-include="getSlide()"></div>
+
+
+      <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+          <div class="navbar-text">
+            <div class="btn-group" role="group">
+              <button type="button"
+                      class="btn btn-default"
+                      ng-click="prevSlide()">
+                    Prev
+              </button>
+              <button type="button"
+                      class="btn"
+                      ng-repeat="slide in slides"
+                      ng-click="setSlideIndex($index)"
+                      ng-class="getClass($index)">
+                  {{$index +1}}
+              </button>
+              <button type="button"
+                      class="btn btn-default"
+                      ng-click="nextSlide()">
+                  Next
+              </button>
+            </div>
+          </div>
+          <div class="navbar-text navbar-right">
+            <button type="button"
+                    class="btn btn-default"
+                    style="margin-right: 20px;" DISABLED>
+              Wayne Simmerson &ltwsimmerson@gmail.com&gt
+            </button>
+          </div>
+      </div>
+      </nav>
+
+    <div>
+  </div>
+</body>
+</html>
