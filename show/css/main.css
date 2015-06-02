@@ -1,7 +1,19 @@
 body {
+  background-image: url("/img/background.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  font-weight: bold;
   padding: 20px;
 }
 
 div:focus {
   outline: none;
+}
+
+.slide {
+  background: #fff;
+  border-radius: 10px;
+  min-height: 500px;
+  opacity: 0.8;
+  padding: 15px;
 }

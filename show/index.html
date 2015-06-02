@@ -8,12 +8,11 @@
 </head>
 <body ng-app="presentationApp">
   <div ng-controller="slideCtrl">
-    <div  ng-keydown="key($event)" tabindex="1"  style="min-height:600px">
+    <div  ng-keydown="key($event)" tabindex="1">
 
-      <div ng-include="getSlide()"></div>
+      <div ng-include="getSlide()" class="slide"></div>
 
-
-      <nav class="navbar navbar-default navbar-fixed-bottom">
+      <nav class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="container-fluid">
           <div class="navbar-text">
             <div class="btn-group" role="group">
@@ -46,7 +45,7 @@
       </div>
       </nav>
 
-    <div>
+    </div>
   </div>
 </body>
 </html>
